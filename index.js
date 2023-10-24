@@ -9,21 +9,18 @@ let messageElement = document.getElementById("message");
 
 //buttons click functions
 function saveWord() {
-    console.log("Saving...")
     dictionaryList.add(inputElement.value.toLowerCase());
     saveWordMsg();
     inputElement.value ="";
 };
 
 function searchWord() {
-    console.log("Searching...");
-    if(dictionaryList.has(inputElement.value.toLowerCase())) { 
+    if (dictionaryList.has(inputElement.value.toLowerCase())) { 
         showFoundWord();
     } else {
         showNotFoundWord();
     }
-
-}
+};
 
 //view elements functions
 function showFoundWord() { 
